@@ -4,21 +4,21 @@ Basic Coding Standard
 Tiêu chuần của phần này bao gồm các yêu cầu  cần có để mã hóa tiêu chuẩn(standard coding)mục đích đảm bảo một mức độ cao về khả năng tương thích giữa kỹ thuật với  chia sẻ code php
 
 Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" được giải thích như trong #[RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
+"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" được giải thích như trong [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
 
-1. Overview
+1. Tổng quát
 -----------
 
-- Files MUST use only `<?php` and `<?=` tags.
+- Files chỉ có thể(MUST) sử dụng tags`<?php` và `<?=`
 
-- Files MUST use only #UTF-8 without BOM for PHP code.
+- Files chỉ có thể (MUST) sử dụng [UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM cho  code PHP
 
-- Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
+- Files nên (SHOULD) *either* declare symbols (classes, functions, constants, etc.)
   *or* cause side-effects (e.g. generate output, change .ini settings, etc.)
   but SHOULD NOT do both.
 
