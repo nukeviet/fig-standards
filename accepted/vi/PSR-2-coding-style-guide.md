@@ -1,42 +1,52 @@
-Coding Style Guide
+Hướng dẫn về Coding Style - Coding Style Guide
 ==================
 
 This guide extends and expands on [PSR-1], the basic coding standard.
+Hướng dẫn này được dựa trên và phát triển từ [PSR-1], các tiêu chuẩn coding cơ bản
 
 The intent of this guide is to reduce cognitive friction when scanning code
 from different authors. It does so by enumerating a shared set of rules and
 expectations about how to format PHP code.
+Mục đích của hướng dẫn này là để giảm sự khó khăn khi đọc code của những người khác, bằng cách đặt ra các tiêu chuẩn chung hay gợi ý về việc format PHP code
 
 The style rules herein are derived from commonalities among the various member
 projects. When various authors collaborate across multiple projects, it helps
 to have one set of guidelines to be used among all those projects. Thus, the
 benefit of this guide is not in the rules themselves, but in the sharing of
 those rules.
+Các tiêu chuẩn về style ở đây đều được bắt nguồn từ sự giống nhau giữa các project khác nhau.Khi mọi người hợp tác với nhau trong cùng 1 project, những tiêu chuẩn này sẽ là bộ tiêu chuẩn chung được dùng trong toàn bộ project đó.Vì vậy lợi ích đạt được không chỉ ở những tiêu chuẩn này mà còn ở việc chia sẻ những tiêu chuẩn này
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119].
+Những từ "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED", "MAY", và "OPTIONAL" trong tài liệu này cần được hiểu như trong mô tả ở [RFC 2119].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 
 
-1. Overview
+1. Overview Tổng Quan
 -----------
 
 - Code MUST follow a "coding style guide" PSR [[PSR-1]].
+- Code PHẢI tuân theo "coding style guide" PRS [[PSR-1]]
 
 - Code MUST use 4 spaces for indenting, not tabs.
+- Code không dùng tab mà PHẢI dùng 4 dấu cách để indenting*lùi đầu dòng*
 
 - There MUST NOT be a hard limit on line length; the soft limit MUST be 120
   characters; lines SHOULD be 80 characters or less.
+- KHÔNG CẦN hard limit về độ dài của 1 dòng; soft limit PHẢI là 120 ký tự; 1 dòng NÊN từ 80 ký tự trở xuống
 
 - There MUST be one blank line after the `namespace` declaration, and there
   MUST be one blank line after the block of `use` declarations.
+- PHẢI có 1 dòng trống sau phần khai báo `namespace`, và PHẢI có 1 dòng trống sau phần khái báo `use`
 
 - Opening braces for classes MUST go on the next line, and closing braces MUST
   go on the next line after the body.
+- Dấu mở ngoặc nhọn khi khai báo class PHẢI viết ở dòng mới///////////////////////////////////
 
 - Opening braces for methods MUST go on the next line, and closing braces MUST
   go on the next line after the body.
