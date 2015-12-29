@@ -19,7 +19,7 @@ interpreted as described in [RFC 2119].
 
 - Files MUST use only `<?php` and `<?=` tags.
 
-- Files MUST use only UTF-8 without BOM for PHP code.
+- Files MUST use only #UTF-8 without BOM for PHP code.
 
 - Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
   *or* cause side-effects (e.g. generate output, change .ini settings, etc.)
