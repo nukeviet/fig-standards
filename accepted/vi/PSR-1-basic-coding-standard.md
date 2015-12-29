@@ -1,13 +1,10 @@
 Basic Coding Standard
 =====================
 
-This section of the standard comprises what should be considered the standard
-coding elements that are required to ensure a high level of technical
-interoperability between shared PHP code.
+Tiêu chuần của phần này bao gồm các yêu cầu  cần có để mã hóa tiêu chuẩn(standard coding)mục đích đảm bảo một mức độ cao về khả năng tương thích giữa kỹ thuật với  chia sẻ code php
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119].
+Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" được giải thích như trong #[RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
