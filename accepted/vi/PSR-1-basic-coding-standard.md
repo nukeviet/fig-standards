@@ -18,9 +18,9 @@ Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 
 - Files chỉ có thể (MUST) sử dụng [UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM cho  code PHP
 
-- Files nên (SHOULD) *either* declare [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants, etc.)
-  *or* cause [side-effects](http://stevendo87.blogspot.com/2012/02/hieu-ung-le-side-effect-la-gi-loi-ich.html) (e.g. generate output, change .ini settings, etc.)
-  but SHOULD NOT do both.
+- Files có thể (SHOULD) định nghĩa [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants, etc.)
+ hoặc gây ra hiệu ứng bên lề ([side-effects])(http://stevendo87.blogspot.com/2012/02/hieu-ung-le-side-effect-la-gi-loi-ich.html) (e.g. generate output, change .ini settings, etc.)
+  nhưng không nên (SHOULD NOT) làm cả 2
 
 - Namespaces and classes MUST follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
 
