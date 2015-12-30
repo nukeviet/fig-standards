@@ -19,16 +19,16 @@ Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 - Files chỉ có thể (MUST) sử dụng [UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM cho  code PHP
 
 - Files có thể (SHOULD) định nghĩa [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants, etc.)
- hoặc gây ra hiệu ứng bên lề ([side-effects](http://stevendo87.blogspot.com/2012/02/hieu-ung-le-side-effect-la-gi-loi-ich.html)) (e.g. generate output, change .ini settings, etc.)
+ hoặc gây ra hiệu ứng  lề ([side-effects](http://stevendo87.blogspot.com/2012/02/hieu-ung-le-side-effect-la-gi-loi-ich.html)) (e.g. generate output, change .ini settings, etc.)
   nhưng không nên (SHOULD NOT) làm cả 2
 
-- Namespaces and classes MUST follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
+- Namespaces và classes phải(MUST) tuân theo quy chuẩn "autoloading" của PSR: [[PSR-0], [PSR-4]].
 
-- Class names MUST be declared in `StudlyCaps`.
+- Tên class phải( MUST) viết dưới dạng `StudlyCaps`.
 
-- Class constants MUST be declared in all upper case with underscore separators.
+- Tên constants của class phải (MUST) được viết hoa toàn bộ và có dấu gạch dưới ngăn cách giữa các từ
 
-- Method names MUST be declared in `camelCase`.
+- Tên phương thức (Method) phải  (MUST)được viết dưới dạng `camelCase`.
 
 
 2. Files
@@ -36,25 +36,23 @@ Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 
 ### 2.1. PHP Tags
 
-PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it
-MUST NOT use the other tag variations.
+Code PHP phải (MUST) sử dụng tag `<?php ?>` đầy đủ hoặc  short-echo `<?= ?>` tags; Ngoài ra
+không được(MUST NOT) sử dụng các tag thay đổi khác.
 
-### 2.2. Character Encoding
+### 2.2. Character Encoding(Mã hóa kí tự)
 
-PHP code MUST use only UTF-8 without BOM.
+code PHP phải (MUST)[UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM
 
-### 2.3. Side Effects
+### 2.3. Side Effects(Hiệu ứng lề)
 
-A file SHOULD declare new symbols (classes, functions, constants,
-etc.) and cause no other side effects, or it SHOULD execute logic with side
-effects, but SHOULD NOT do both.
+Một file nên( SHOULD) khai báo new [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants,
+etc.) và không gây ra bất kỳ hiệu ứng lề (side effects), hoặc nó nên (SHOULD) tạo ra hiệu ứng lề( side
+effects),nhưng không nên (SHOULD NOT) làm cả 2.
 
-The phrase "side effects" means execution of logic not directly related to
-declaring classes, functions, constants, etc., *merely from including the
+Cụm từ "side effects" mang ý nghĩa là thực hiện  logic mà không liên quan tới với việc định nghĩa các classes, functions, constants, etc., *chỉ là từ việc include
 file*.
 
-"Side effects" include but are not limited to: generating output, explicit
-use of `require` or `include`, connecting to external services, modifying ini
+"Side effects" bao gồm (nhưng không giới hạn): tạo output,sử dụng `require` or `include`, kết nối đến các dịch vụ bên ngoài, thay đổi file
 settings, emitting errors or exceptions, modifying global or static variables,
 reading from or writing to a file, and so on.
 
