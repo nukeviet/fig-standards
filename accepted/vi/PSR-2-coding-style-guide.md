@@ -639,10 +639,9 @@ Các kiến nghị trong tương lai CÓ THỂ sửa đổi và mở rộng hư�
 Appendix A. Survey
 ------------------
 
-In writing this style guide, the group took a survey of member projects to
-determine common practices.  The survey is retained herein for posterity.
+
 Khi viết hướng dẫn này, nhóm đã khảo sát các thành viên để xác định các thông lệ chung. 
-Khao sát này được viết ở đây
+Khảo sát này được viết ở đây
 
 ### A.1.Dữ liệu khảo sát
 
