@@ -7,17 +7,16 @@ PSR-2 Meta Document
 The intent of this guide is to reduce cognitive friction when scanning code from different authors. It does so 
 by enumerating a shared set of rules and expectations about how to format PHP code.
 Mục đích của hướng dẫn này là để giảm sự khó khăn khi lấy, hay đọc code của 1 người khác.
-Để được như vậy hướng dẫn này tập hợp lại các quy tắc và các kỳ vọng về dịnh dạng PHP code
+Việc này được thực hiện bằng cách liệu kê các qui tắc và ngoại lệ trong việc định dạng PHP code
 
 The style rules herein are derived from commonalities among the various member projects. When various authors 
 collaborate across multiple projects, it helps to have one set of guidelines to be used among all those 
 projects. Thus, the benefit of this guide is not in the rules themselves, but in the sharing of those rules.
-Các quy tắc này bắt nguồn từ các điềm giống nhau giữa các dự án.
-Khi các tác giả khác nhau hợp tác qua các dự án, họ sẽ có 1 tập hợp các quy tắc được sử dụng trong toàn bộ dự án.
-Như vậy lợi ích của hướng dẫn này không chỉ
+Các quy tắc này bắt nguồn từ sựtương đồng trong cách định dạng của các thành viên trong dự án.
+Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có ích nếu có một hướng dẫn thống nhất áp dụng vào toàn bộ dự án. Do đó lợi ích của hướng dẫn này không nằm ở các qui tắc, mà năm trong việc phổ biên các quy tắc đó
 
 
-2. Votes
+2. Votes Bỏ phiếu
 --------
 
 - **Acceptance Vote:** [ML](https://groups.google.com/d/msg/php-fig/c-QVvnZdMQ0/TdDMdzKFpdIJ)
