@@ -8,11 +8,11 @@ Hướng dẫn này được dựa trên và phát triển từ [PSR-1], các ti
 Mục đích của hướng dẫn này là để giảm sự khó khăn khi đọc code của những người khác, bằng cách đặt ra các tiêu chuẩn chung hay gợi ý về việc format PHP code
 
 
-Các tiêu chuẩn về style ở đây đều được bắt nguồn từ sự giống nhau giữa các project khác nhau.Khi mọi người hợp tác với nhau trong cùng 1 project, những tiêu chuẩn này sẽ là bộ tiêu chuẩn chung được dùng trong toàn bộ project đó.Vì vậy lợi ích đạt được không chỉ ở những tiêu chuẩn này mà còn ở việc chia sẻ những tiêu chuẩn này
+Các tiêu chuẩn về style ở đây đều được bắt nguồn từ sự giống nhau giữa các dự án khác nhau.Khi mọi người hợp tác với nhau trong cùng 1 dự án, những tiêu chuẩn này sẽ là bộ tiêu chuẩn chung được dùng trong toàn bộ dự án đó.Vì vậy lợi ích đạt được không nằm ở những tiêu chuẩn này mà còn ở việc chia sẻ những tiêu chuẩn này
 
 
-Những từ "MUST" *PHẢI*, "MUST NOT"*PHẢI KHÔNG...*, "REQUIRED"*BẮT BUỘC*, "SHALL", "SHALL NOT", "SHOULD"*NÊN*,
-"SHOULD NOT"*KHÔNG NÊN*, "RECOMMENDED"*KHUYẾN CÁO*, "MAY"*CÓ THỂ*, và "OPTIONAL"*KHÔNG BẮT BUỘC* trong tài liệu này cần được hiểu như trong mô tả ở [RFC 2119].
+Những từ "MUST" *PHẢI*, "MUST NOT" *PHẢI KHÔNG...*, "REQUIRED" *BẮT BUỘC*, "SHALL", "SHALL NOT", "SHOULD" *NÊN*,
+"SHOULD NOT" *KHÔNG NÊN*, "RECOMMENDED" *KHUYẾN CÁO*, "MAY" *CÓ THỂ*, và "OPTIONAL" *KHÔNG BẮT BUỘC* trong tài liệu này cần được hiểu như trong mô tả ở [RFC 2119].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
@@ -26,7 +26,7 @@ Những từ "MUST" *PHẢI*, "MUST NOT"*PHẢI KHÔNG...*, "REQUIRED"*BẮT BU�
 - Code PHẢI tuân theo "coding style guide" PRS [[PSR-1]]
 
 
-- Code không dùng tab mà PHẢI dùng 4 dấu cách để indenting*lùi đầu dòng*
+- Code không dùng tab mà PHẢI dùng 4 dấu cách để indenting *căn lề*
 
 
 - KHÔNG có hard limit về độ dài của 1 dòng; soft limit PHẢI là 120 ký tự; 1 dòng NÊN từ 80 ký tự trở xuống
@@ -115,7 +115,7 @@ Soft limit độ dài của 1 dòng phải là 120 ký tự; automated style che
 1 Dòng Không nên dài hơn 80 ký tự; Nếu dài hơn 80 ký tự thì dòng đó NÊN được chia thành nhiều dòng và mỗi dòng không nhiều hơn 80 ký tự
 
 
-Dòng không trống *non-blank lines* PHẢI KHÔNG có trailing whitespace*dấu cách cuối dòng* ở cuối
+Dòng không trống *non-blank lines* PHẢI KHÔNG có trailing whitespace *dấu cách cuối dòng* ở cuối
 
 
 Dòng trống CÓ THỂ được thêm vào để dễ đọc hơn và cho thấy mối quan hệ của các khối lệnh
@@ -200,7 +200,7 @@ class ClassName extends ParentClass implements \ArrayAccess, \Countable
 ```
 
 
-Danh sách `implements` CÓ THỂ được chia thành nhiều dòng, trong đó mỗi dòng sẽ indented*căn lề* 1 lần
+Danh sách `implements` CÓ THỂ được chia thành nhiều dòng, trong đó mỗi dòng sẽ indented *căn lề* 1 lần
 Khi đó thành phần đầu tiên PHẢI viết ở dòng mới và mỗi dùng chỉ được có 1 interface
 
 ```php
@@ -252,7 +252,7 @@ class ClassName
 Visibility PHẢI được khai báo ở mọi methods
 
 
-Tên của Method KHÔNG NÊN được prefixed bởi dấu gạch dưới để biểu thị tính protected hay private
+Tên của Method KHÔNG NÊN được prefixed  bởi dấu gạch dưới để biểu thị tính protected hay private
 
 
 Tên của Method PHẢI KHÔNG được có dấu cách phía sau tên method.
