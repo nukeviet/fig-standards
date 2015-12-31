@@ -9,7 +9,7 @@ Mục đích của hướng dẫn này là để giảm sự khó khăn khi lấ
 Việc này được thực hiện bằng cách liệu kê các qui tắc và ngoại lệ trong việc định dạng PHP code
 
 
-Các quy tắc này bắt nguồn từ sựtương đồng trong cách định dạng của các thành viên trong dự án.
+Các quy tắc này bắt nguồn từ sự tương đồng trong cách định dạng của các thành viên trong dự án.
 Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có ích nếu có một hướng dẫn thống nhất áp dụng vào toàn bộ dự án. Do đó lợi ích của hướng dẫn này không nằm ở các qui tắc, mà năm trong việc phổ biên các quy tắc đó
 
 
@@ -28,7 +28,7 @@ Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có
 Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument.
 Vì thế phần 4.6 không được tự động thực thi, mảng hay *anonymous functions* có thể viết thành nhiều dòng
 
-The following examples are perfectly valid in PSR-2:
+
 Ví dụ dưới đây là hoàn toàn hợp lệ trong PSR-2:
 
 ```php
