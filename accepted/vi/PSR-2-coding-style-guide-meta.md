@@ -25,7 +25,7 @@ Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có
 ### 3.1 - Multi-line Arguments (09/08/2013)
 
 
-Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument.
+Sử dụng 1 hay nhiều dòng arguments *đối số* (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument *đối số*.
 Vì thế phần 4.6 không được tự động thực thi, mảng hay *anonymous functions* có thể viết thành nhiều dòng
 
 
