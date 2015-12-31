@@ -641,7 +641,7 @@ Appendix A. Survey
 
 
 Khi viết hướng dẫn này, nhóm đã khảo sát các thành viên để xác định các thông lệ chung. 
-Khảo sát này được viết ở đây
+
 
 ### A.1.Dữ liệu khảo sát
 
