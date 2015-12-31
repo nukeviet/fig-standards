@@ -24,10 +24,9 @@ Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có
 
 ### 3.1 - Multi-line Arguments (09/08/2013)
 
-Using one or more multi-line arguments (i.e: arrays or anonymous functions) does not constitute 
-splitting the argument list itself, therefore Section 4.6 is not automatically enforced. Arrays and anonymous 
-functions are able to span multiple lines.
-Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument,  mảng hay *anonymous functions* có thể viết thành nhiều dòng
+
+Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument.
+Vì thế phần 4.6 không được tự động thực thi, mảng hay *anonymous functions* có thể viết thành nhiều dòng
 
 The following examples are perfectly valid in PSR-2:
 Ví dụ dưới đây là hoàn toàn hợp lệ trong PSR-2:
@@ -45,8 +44,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 
 ### 3.2 - Extending Multiple Interfaces (10/17/2013)
 
-When extending multiple interfaces, the list of `extends` should be treated the same as a list
-of `implements`, as declared in Section 4.1.
+
 Khi mở rộng đa giao diện, danh sách `extends` nên được dùng như 1 danh sách `implements` như đã đề cập ở phần 4.1
 
 
