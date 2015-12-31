@@ -1,4 +1,4 @@
-PSR-2 Meta Document
+Siêu tài liệu PSR-2
 ===================
 
 1.Tóm tắt
