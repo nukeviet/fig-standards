@@ -27,7 +27,7 @@ Khi các tác giả hợp tác với nhau trong nhiều dự án, sẽ rất có
 Using one or more multi-line arguments (i.e: arrays or anonymous functions) does not constitute 
 splitting the argument list itself, therefore Section 4.6 is not automatically enforced. Arrays and anonymous 
 functions are able to span multiple lines.
-Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument,  mảng hay *anonymous functions* 
+Sử dụng 1 hay nhiều dòng arguments (nghĩa là mảng hay *anonymous functions*) không chia thành danh sách argument,  mảng hay *anonymous functions* có thể viết thành nhiều dòng
 
 The following examples are perfectly valid in PSR-2:
 Ví dụ dưới đây là hoàn toàn hợp lệ trong PSR-2:
