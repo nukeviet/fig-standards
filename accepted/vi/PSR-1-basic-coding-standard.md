@@ -58,10 +58,12 @@ settings,phát hiện ra lỗi hoặc ngoại lệ (exceptions), chỉnh sửa b
 
 Dưới đây là 1 ví dụ về file chứa cả dinh nghia(declarations) và hiệu ứng lề (side effects);
 i.e, an example of what to avoid:
+hàm bật tính năng [phát hiện lỗi](http://www.volvoxfund.com/learnphp/PHPNote/Bat_thong_bao_loi_khi_dich.html)
+ini_set('error_reporting', E_ALL);
 
 ```php
 <?php
-// side effect: [thay đổi](http://www.volvoxfund.com/learnphp/PHPNote/Bat_thong_bao_loi_khi_dich.html) ini settings
+// side effect: thay đổi ini settings
 ini_set('error_reporting', E_ALL);
 
 // side effect: loads a file
