@@ -52,16 +52,16 @@ effects),nhưng không nên (SHOULD NOT) làm cả 2.
 Cụm từ "side effects" mang ý nghĩa là thực hiện  logic mà không liên quan tới với việc định nghĩa các classes, functions, constants, etc., *chỉ là từ việc include
 file*.
 
-"Side effects" bao gồm (nhưng không giới hạn): tạo output,sử dụng `require` or `include`, kết nối đến các dịch vụ bên ngoài, thay đổi file
-settings, emitting errors or exceptions, modifying global or static variables,
-reading from or writing to a file, and so on.
+"Side effects" bao gồm (nhưng không giới hạn): tạo output,sử dụng `require` hoặc `include`, kết nối đến các dịch vụ bên ngoài, thay đổi file
+settings,phát hiện ra lỗi hoặc ngoại lệ (exceptions), chỉnh sửa biển global hoặc biến static,
+đọc hoặc viết file, và v.v.
 
-The following is an example of a file with both declarations and side effects;
+Dưới đây là 1 ví dụ về file chứa cả dinh nghia(declarations) và hiệu ứng lề (side effects);
 i.e, an example of what to avoid:
 
 ```php
 <?php
-// side effect: change ini settings
+// side effect: [thay đổi](http://www.volvoxfund.com/learnphp/PHPNote/Bat_thong_bao_loi_khi_dich.html) ini settings
 ini_set('error_reporting', E_ALL);
 
 // side effect: loads a file
@@ -76,9 +76,8 @@ function foo()
     // function body
 }
 ```
+Ví dụ sau đây là 1 file chứa các định nghĩa(declaration) không có hiệu ứng lề (side effects)
 
-The following example is of a file that contains declarations without side
-effects; i.e., an example of what to emulate:
 
 ```php
 <?php
@@ -88,7 +87,8 @@ function foo()
     // function body
 }
 
-// conditional declaration is *not* a side effect
+// conditional declaration is *not* a side effect(điều kiện để định nghĩa khi không có 1 side effect)
+//khong ton tai file bar thì định nghĩa hàm bar
 if (! function_exists('bar')) {
     function bar()
     {
@@ -101,12 +101,11 @@ if (! function_exists('bar')) {
 3. Namespace and Class Names
 ----------------------------
 
-Namespaces and classes MUST follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
+Namespaces và classes phải (MUST) theo chuẩn "autoloading" PSR: [[PSR-0], [PSR-4]].
+Điều này có nghĩa là mỗi lớp tương ứng 1 file và có ít nhất 1 level trong namespace:
+ a top-level vendor name.
 
-This means each class is in a file by itself, and is in a namespace of at
-least one level: a top-level vendor name.
-
-Class names MUST be declared in `StudlyCaps`.
+Tên class phải (MUST) viết dưới dạng `StudlyCaps`.
 
 Code written for PHP 5.3 and after MUST use formal namespaces.
 
