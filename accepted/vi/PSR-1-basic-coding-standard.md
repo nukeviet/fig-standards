@@ -107,11 +107,11 @@ Namespaces và classes phải (MUST) theo chuẩn "autoloading" PSR: [[PSR-0], [
 Điều này có nghĩa là mỗi lớp tương ứng 1 file và có ít nhất 1 level trong namespace:
  a top-level vendor name.
 
-Tên class phải (MUST) viết dưới dạng `StudlyCaps`.
+Tên class phải (MUST) viết dưới dạng [`StudlyCaps`](http://tapchilaptrinh.vn/2012/08/03/phpquy-uoc-dat-ten-naming-conventions/).
 
-Code written for PHP 5.3 and after MUST use formal namespaces.
+Code 5.3 trở lên phải (MUST) phải dùng đúng namespaces.
 
-For example:
+Ví dụ:
 
 ```php
 <?php
@@ -123,8 +123,8 @@ class Foo
 }
 ```
 
-Code written for 5.2.x and before SHOULD use the pseudo-namespacing convention
-of `Vendor_` prefixes on class names.
+Code với phiên bản 5.2.x trở xuống nên (SHOULD) sử dụng pseudo-namespacing convention
+với tiền tố `Vendor_`trên tên lớp.
 
 ```php
 <?php
@@ -137,12 +137,12 @@ class Vendor_Model_Foo
 4. Class Constants, Properties, and Methods
 -------------------------------------------
 
-The term "class" refers to all classes, interfaces, and traits.
+từ "class" được hiểu là tất cả các classes, interfaces(giao diện), và traits(đặc điểm).
 
 ### 4.1. Constants
 
-Class constants MUST be declared in all upper case with underscore separators.
-For example:
+Hằng số lớp phải (MUST) phải được khai bao tát cả là chữ in hoa và được phân cách giữa các từ là dấu gạch dưới.
+Ví dụ:
 
 ```php
 <?php
@@ -156,14 +156,14 @@ class Foo
 ```
 
 ### 4.2. Properties
+Bộ quy tắc này không đưa ra quy định hay gợi ý về việc viết tên property như nào thao dạng
+`$StudlyCaps`, `$camelCase`, hay `$under_score` .
 
-This guide intentionally avoids any recommendation regarding the use of
-`$StudlyCaps`, `$camelCase`, or `$under_score` property names.
+Dù sử dụng quy tắc đặt tên như nào đi nữa thì nó nên được thực hiện thống nhất trong một phạm vi hợp lý.
+Phạm vi đó có thể là vendor-level, package-level, class-level,
+hay method-level
 
-Whatever naming convention is used SHOULD be applied consistently within a
-reasonable scope. That scope may be vendor-level, package-level, class-level,
-or method-level.
 
 ### 4.3. Methods
 
-Method names MUST be declared in `camelCase()`.
+ Tên Method  phải (MUST) được viết dưới dạng `camelCase()`.
