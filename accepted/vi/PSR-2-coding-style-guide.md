@@ -19,7 +19,7 @@ Những từ "MUST" *PHẢI*, "MUST NOT" *PHẢI KHÔNG...*, "REQUIRED" *BẮT B
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 
 
-1.Khái Quát
+1. Khái Quát
 -----------
 
 
