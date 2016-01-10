@@ -1,37 +1,34 @@
 Basic Coding Standard
 =====================
 
-This section of the standard comprises what should be considered the standard
-coding elements that are required to ensure a high level of technical
-interoperability between shared PHP code.
+Tiêu chuần của phần này bao gồm các yêu cầu  cần có để mã hóa tiêu chuẩn(standard coding)mục đích đảm bảo một mức độ cao về khả năng tương thích giữa kỹ thuật với  chia sẻ code php
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119].
+Các từ khóa "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" được giải thích như trong [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
 
-1. Overview
+1. Tổng quát
 -----------
 
-- Files MUST use only `<?php` and `<?=` tags.
+- Files chỉ có thể(MUST) sử dụng tags`<?php` và `<?=`
 
-- Files MUST use only UTF-8 without BOM for PHP code.
+- Files chỉ có thể (MUST) sử dụng [UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM cho  code PHP
 
-- Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
-  *or* cause side-effects (e.g. generate output, change .ini settings, etc.)
-  but SHOULD NOT do both.
+- Files có thể (SHOULD) định nghĩa [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants, etc.)
+ hoặc gây ra hiệu ứng  lề ([side-effects](http://stevendo87.blogspot.com/2012/02/hieu-ung-le-side-effect-la-gi-loi-ich.html)) (e.g. generate output, change .ini settings, etc.)
+  nhưng không nên (SHOULD NOT) làm cả 2
 
-- Namespaces and classes MUST follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
+- Namespaces và classes phải(MUST) tuân theo quy chuẩn "autoloading" của PSR: [[PSR-0], [PSR-4]].
 
-- Class names MUST be declared in `StudlyCaps`.
+- Tên class phải( MUST) viết dưới dạng `StudlyCaps`.
 
-- Class constants MUST be declared in all upper case with underscore separators.
+- Tên constants của class phải (MUST) được viết hoa toàn bộ và có dấu gạch dưới ngăn cách giữa các từ
 
-- Method names MUST be declared in `camelCase`.
+- Tên phương thức (Method) phải  (MUST)được viết dưới dạng `camelCase`.
 
 
 2. Files
@@ -39,34 +36,34 @@ interpreted as described in [RFC 2119].
 
 ### 2.1. PHP Tags
 
-PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it
-MUST NOT use the other tag variations.
+Code PHP phải (MUST) sử dụng tag `<?php ?>` đầy đủ hoặc  short-echo `<?= ?>` tags; Ngoài ra
+không được(MUST NOT) sử dụng các tag thay đổi khác.
 
-### 2.2. Character Encoding
+### 2.2. Character Encoding(Mã hóa kí tự)
 
-PHP code MUST use only UTF-8 without BOM.
+code PHP phải (MUST)[UTF-8](https://vi.wikipedia.org/wiki/UTF-8) không dùng BOM
 
-### 2.3. Side Effects
+### 2.3. Side Effects(Hiệu ứng lề)
 
-A file SHOULD declare new symbols (classes, functions, constants,
-etc.) and cause no other side effects, or it SHOULD execute logic with side
-effects, but SHOULD NOT do both.
+Một file nên( SHOULD) khai báo new [symbols](http://tongquanvienthong.blogspot.com/2012/02/symbol-la-gi-dich-ra-thi-no-nghia-la-ky.html) (classes, functions, constants,
+etc.) và không gây ra bất kỳ hiệu ứng lề (side effects), hoặc nó nên (SHOULD) tạo ra hiệu ứng lề( side
+effects),nhưng không nên (SHOULD NOT) làm cả 2.
 
-The phrase "side effects" means execution of logic not directly related to
-declaring classes, functions, constants, etc., *merely from including the
+Cụm từ "side effects" mang ý nghĩa là thực hiện  logic mà không liên quan tới với việc định nghĩa các classes, functions, constants, etc., *chỉ là từ việc include
 file*.
 
-"Side effects" include but are not limited to: generating output, explicit
-use of `require` or `include`, connecting to external services, modifying ini
-settings, emitting errors or exceptions, modifying global or static variables,
-reading from or writing to a file, and so on.
+"Side effects" bao gồm (nhưng không giới hạn): tạo output,sử dụng `require` hoặc `include`, kết nối đến các dịch vụ bên ngoài, thay đổi file
+settings,phát hiện ra lỗi hoặc ngoại lệ (exceptions), chỉnh sửa biển global hoặc biến static,
+đọc hoặc viết file, và v.v.
 
-The following is an example of a file with both declarations and side effects;
+Dưới đây là 1 ví dụ về file chứa cả dinh nghia(declarations) và hiệu ứng lề (side effects);
 i.e, an example of what to avoid:
+Hàm bật tính năng [phát hiện lỗi](http://www.volvoxfund.com/learnphp/PHPNote/Bat_thong_bao_loi_khi_dich.html)
+ini_set('error_reporting', E_ALL);
 
 ```php
 <?php
-// side effect: change ini settings
+// side effect: thay đổi ini settings
 ini_set('error_reporting', E_ALL);
 
 // side effect: loads a file
@@ -81,9 +78,8 @@ function foo()
     // function body
 }
 ```
+Ví dụ sau đây là 1 file chứa các định nghĩa(declaration) không có hiệu ứng lề (side effects)
 
-The following example is of a file that contains declarations without side
-effects; i.e., an example of what to emulate:
 
 ```php
 <?php
@@ -93,7 +89,8 @@ function foo()
     // function body
 }
 
-// conditional declaration is *not* a side effect
+// conditional declaration is *not* a side effect(điều kiện để định nghĩa khi không có 1 side effect)
+//khong ton tai file bar thì định nghĩa hàm bar
 if (! function_exists('bar')) {
     function bar()
     {
@@ -106,16 +103,15 @@ if (! function_exists('bar')) {
 3. Namespace and Class Names
 ----------------------------
 
-Namespaces and classes MUST follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
+Namespaces và classes phải (MUST) theo chuẩn "autoloading" PSR: [[PSR-0], [PSR-4]].
+Điều này có nghĩa là mỗi lớp tương ứng 1 file và có ít nhất 1 level trong namespace:
+ a top-level vendor name.
 
-This means each class is in a file by itself, and is in a namespace of at
-least one level: a top-level vendor name.
+Tên class phải (MUST) viết dưới dạng [`StudlyCaps`](http://tapchilaptrinh.vn/2012/08/03/phpquy-uoc-dat-ten-naming-conventions/).
 
-Class names MUST be declared in `StudlyCaps`.
+Code 5.3 trở lên phải (MUST) phải dùng đúng namespaces.
 
-Code written for PHP 5.3 and after MUST use formal namespaces.
-
-For example:
+Ví dụ:
 
 ```php
 <?php
@@ -127,8 +123,8 @@ class Foo
 }
 ```
 
-Code written for 5.2.x and before SHOULD use the pseudo-namespacing convention
-of `Vendor_` prefixes on class names.
+Code với phiên bản 5.2.x trở xuống nên (SHOULD) sử dụng pseudo-namespacing convention
+với tiền tố `Vendor_`trên tên lớp.
 
 ```php
 <?php
@@ -141,12 +137,12 @@ class Vendor_Model_Foo
 4. Class Constants, Properties, and Methods
 -------------------------------------------
 
-The term "class" refers to all classes, interfaces, and traits.
+từ "class" được hiểu là tất cả các classes, interfaces(giao diện), và traits(đặc điểm).
 
 ### 4.1. Constants
 
-Class constants MUST be declared in all upper case with underscore separators.
-For example:
+Hằng số lớp phải (MUST) phải được khai bao tát cả là chữ in hoa và được phân cách giữa các từ là dấu gạch dưới.
+Ví dụ:
 
 ```php
 <?php
@@ -160,14 +156,14 @@ class Foo
 ```
 
 ### 4.2. Properties
+Bộ quy tắc này không đưa ra quy định hay gợi ý về việc viết tên property như nào thao dạng
+`$StudlyCaps`, `$camelCase`, hay `$under_score` .
 
-This guide intentionally avoids any recommendation regarding the use of
-`$StudlyCaps`, `$camelCase`, or `$under_score` property names.
+Dù sử dụng quy tắc đặt tên như nào đi nữa thì nó nên được thực hiện thống nhất trong một phạm vi hợp lý.
+Phạm vi đó có thể là vendor-level, package-level, class-level,
+hay method-level
 
-Whatever naming convention is used SHOULD be applied consistently within a
-reasonable scope. That scope may be vendor-level, package-level, class-level,
-or method-level.
 
 ### 4.3. Methods
 
-Method names MUST be declared in `camelCase()`.
+ Tên Method  phải (MUST) được viết dưới dạng `camelCase()`.
